@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Research</title>
+  <meta name="description" content="Academic homepage: research, publications, teaching, contact." />
+  <meta property="og:title" content="Your Name — Research" />
+  <meta property="og:description" content="Academic homepage: research, publications, teaching, contact." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #111833;
+      --text: #e7eaf6;
+      --muted: #a7b0d4;
+      --accent: #7aa2f7;
+      --accent-2: #a7f3d0;
+      --ring: rgba(122,162,247,0.3);
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f7f8fc; --card:#ffffff; --text:#141826; --muted:#4b5563; --accent:#2456e6; --accent-2:#059669; --ring:rgba(36,86,230,0.2); }
+    }
+    html { scroll-behavior: smooth; }
+    body { margin:0; font:16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    .nav { position: sticky; top: 0; backdrop-filter: saturate(180%) blur(8px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--text) 15%, transparent); z-index: 50; }
+    .nav-inner { max-width: 1000px; margin: 0 auto; padding: 12px 24px; display:flex; align-items:center; gap:16px; }
+    .nav a { padding: 8px 12px; border-radius: 999px; }
+    .nav a.active, .nav a:focus-visible { outline: 0; box-shadow: 0 0 0 4px var(--ring); }
+    header.hero { padding: 64px 24px 24px; }
+    .grid { display:grid; gap:20px; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); align-items: start; }
+    .card { background: var(--card); border:1px solid color-mix(in oklab, var(--text) 10%, transparent); border-radius: 16px; padding: 20px; box-shadow: 0 10px 24px -12px rgba(0,0,0,0.4); }
+    h1 { font-size: clamp(2rem, 4vw, 3rem); line-height:1.1; margin: 0 0 8px; }
+    h2 { font-size: 1.5rem; margin: 0 0 8px; }
+    h3 { margin: 16px 0 8px; font-size: 1.1rem; color: var(--muted); }
+    p { margin: 0 0 12px; }
+    ul { margin: 0; padding-left: 18px; }
+    .tags { display:flex; flex-wrap: wrap; gap:8px; margin-top:8px; }
+    .tag { background: color-mix(in oklab, var(--accent) 15%, transparent); border:1px solid color-mix(in oklab, var(--accent) 40%, transparent); color: var(--text); padding: 4px 10px; border-radius: 999px; font-size: 0.9rem; }
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; background:var(--accent); color:white; font-weight:600; border:none; box-shadow: 0 10px 24px -12px color-mix(in oklab, var(--accent) 50%, transparent); }
+    .btn.secondary { background:var(--accent-2); color:#083344; }
+    .split { display:grid; grid-template-columns: 1fr; gap:16px; }
+    @media (min-width: 820px){ .split { grid-template-columns: 1.2fr .8fr; } }
+    .list li { margin-bottom: 8px; }
+    .pub { margin-bottom: 14px; }
+    .pub b { display:block; }
+    footer { opacity: .8; padding:32px 24px; text-align:center; font-size:.95rem; }
+    .note { font-size:.95rem; color:var(--muted); }
+    .avatar { width: 140px; height: 140px; border-radius: 24px; object-fit: cover; border: 1px solid color-mix(in oklab, var(--text) 15%, transparent); box-shadow: 0 12px 30px -16px rgba(0,0,0,.5) }
+    .section { scroll-margin-top: 72px; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background: color-mix(in oklab, var(--text) 5%, transparent); padding: 2px 6px; border-radius: 6px; border: 1px solid color-mix(in oklab, var(--text) 12%, transparent); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#top" aria-label="Home" class="active">Your Name</a>
+      <div style="flex:1"></div>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="top" class="wrap">
+    <header class="hero split">
+      <div>
+        <h1>Your Name</h1>
+        <p class="note">Your title — Department, University / Institute</p>
+        <p>One–two lines that explain your research focus in plain language. Mention your system(s), questions, and methods at a high level.</p>
+        <div class="tags" aria-label="Research keywords">
+          <span class="tag">Population genomics</span>
+          <span class="tag">Speciation</span>
+          <span class="tag">Host–parasitoid co‑evolution</span>
+          <span class="tag">Comparative genomics</span>
+        </div>
+        <p style="margin-top:16px">
+          <a class="btn" href="#publications">Browse publications</a>
+          <a class="btn secondary" href="cv.pdf" download>Download CV (PDF)</a>
+        </p>
+      </div>
+      <aside>
+        <img class="avatar" src="avatar.jpg" alt="Portrait of Your Name" />
+        <div class="card" style="margin-top:16px">
+          <h3>At a glance</h3>
+          <ul class="list">
+            <li>Currently: Postdoctoral Researcher, Centre for …</li>
+            <li>Interests: genes → ecosystems, recombination, adaptation</li>
+            <li>Methods: field, wet‑lab, bioinformatics, stats, simulation</li>
+          </ul>
+        </div>
+      </aside>
+    </header>
+
+    <section id="research" class="section">
+      <div class="grid">
+        <div class="card">
+          <h2>Research</h2>
+          <p>Write a short overview of your research programme (5–8 sentences). Emphasise the questions, systems, and why it matters. Link to sub‑projects below.</p>
+          <ul class="list">
+            <li><b>Project A:</b> One‑line summary — <a href="#">paper / preprint</a></li>
+            <li><b>Project B:</b> One‑line summary — <a href="#">code / data</a></li>
+            <li><b>Project C:</b> One‑line summary — <a href="#">talk / slides</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>News</h2>
+          <ul class="list">
+            <li><b>Oct 2025:</b> New preprint on XYZ up on bioRxiv.</li>
+            <li><b>Sep 2025:</b> Awarded ABC fellowship.</li>
+            <li><b>Jun 2025:</b> Released v1.0 of our analysis pipeline.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section" style="margin-top:24px">
+      <div class="card">
+        <h2>Publications</h2>
+        <p class="note">Add selected papers here manually, or we can auto‑generate this section from a BibTeX file later.</p>
+        <div class="pub">
+          <b>Lastname, Y., Coauthor, A. (2025). Title of the paper. <i>Journal</i>.</b>
+          <span><a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">Data</a></span>
+        </div>
+        <div class="pub">
+          <b>Lastname, Y., Coauthor, B. (2024). Another title. <i>Journal</i>.</b>
+          <span><a href="#">PDF</a> · <a href="#">Preprint</a></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching" class="section" style="margin-top:24px">
+      <div class="grid">
+        <div class="card">
+          <h2>Teaching & Mentoring</h2>
+          <ul class="list">
+            <li>Course / Workshop (year): one‑line description and your role.</li>
+            <li>Supervision: names (optional), topic, outcomes.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Service</h2>
+          <ul class="list">
+            <li>Conference organisation, seminar series, review service, DEI work, etc.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" style="margin-top:24px">
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:you@university.edu">you@university.edu</a> • <a href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a> • <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> • <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></p>
+        <p class="note">Tip: you can use a simple <span class="kbd">mailto:</span> link for contact without a backend. If you want a contact form, we can add Netlify / Formspree later.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Your Name. Built with a lightweight single file. <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script>
+    // set current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
